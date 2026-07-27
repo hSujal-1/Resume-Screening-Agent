@@ -1,2 +1,2 @@
-Rank,Filename,Similarity Score
-1,sample_resume.txt,0.7233
+Rank,Filename,Name,Email,Skills,Experience,Education,Final Score,Reason
+1,sample_resume.txt,Rahul Sharma,rahul@gmail.com,"Python, SQL, Power BI, Excel, C",2 Years,Bachelor of Engineering,0.733,Good overall match with relevant skills and experience.

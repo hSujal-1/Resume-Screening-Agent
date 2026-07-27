@@ -7,7 +7,12 @@ from parser import (
     extract_experience,
     extract_education
 )
-from scorer import calculate_similarity
+from scorer import (
+    calculate_similarity,
+    calculate_skill_match,
+    calculate_experience_bonus,
+    calculate_final_score
+)
 from exporter import export_to_csv, export_to_json
 
 
@@ -15,6 +20,7 @@ def main():
 
     # Load Job Description
     job_description = load_job_description("../data/jd/job_description.txt")
+    jd_skills = extract_skills(job_description)
 
     print("=" * 50)
     print("JOB DESCRIPTION")
@@ -71,17 +77,32 @@ def main():
             experience = extract_experience(resume["text"])
             education = extract_education(resume["text"])
 
-            score = calculate_similarity(
+            similarity_score = calculate_similarity(
                 job_description,
                 resume["text"]
             )
 
-            if score >= 0.80:
-                reason = "High semantic similarity to the Job Description"
-            elif score >= 0.60:
-                reason = "Moderate semantic similarity to the Job Description"
+            skill_match_score = calculate_skill_match(
+                jd_skills,
+                skills
+            )
+
+            experience_bonus = calculate_experience_bonus(
+                experience
+            )
+
+            final_score = calculate_final_score(
+                similarity_score,
+                skill_match_score,
+                experience_bonus
+            )
+
+            if final_score >= 0.80:
+                reason = "Excellent overall match based on AI similarity, skills, and experience."
+            elif final_score >= 0.60:
+                reason = "Good overall match with relevant skills and experience."
             else:
-                reason = "Low semantic similarity to the Job Description"
+                reason = "Partial match. Candidate may require further evaluation."
 
             results.append({
                 "filename": resume["filename"],
@@ -90,7 +111,7 @@ def main():
                 "skills": skills,
                 "experience": experience,
                 "education": education,
-                "score": score,
+                "score": final_score,
                 "reason": reason
             })
 

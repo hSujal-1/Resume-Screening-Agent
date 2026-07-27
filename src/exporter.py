@@ -11,14 +11,30 @@ def export_to_csv(results, output_path):
 
         writer = csv.writer(file)
 
-        writer.writerow(["Rank", "Filename", "Similarity Score"])
+        writer.writerow([
+            "Rank",
+            "Filename",
+            "Name",
+            "Email",
+            "Skills",
+            "Experience",
+            "Education",
+            "Final Score",
+            "Reason"
+        ])
 
         for index, result in enumerate(results, start=1):
 
             writer.writerow([
                 index,
                 result["filename"],
-                round(result["score"], 4)
+                result["name"],
+                result["email"],
+                ", ".join(result["skills"]),
+                result["experience"],
+                result["education"],
+                round(result["score"], 4),
+                result["reason"]
             ])
 
     print(f"\nCSV exported successfully: {output_path}")
