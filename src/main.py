@@ -1,5 +1,6 @@
 from parser import load_job_description, load_all_resumes
 from scorer import calculate_similarity
+from exporter import export_to_csv, export_to_json
 
 
 def main():
@@ -40,9 +41,17 @@ def main():
             resume["text"]
         )
 
+        if score >= 0.80:
+            reason = "High semantic similarity to the Job Description"
+        elif score >= 0.60:
+            reason = "Moderate semantic similarity to the Job Description"
+        else:
+            reason = "Low semantic similarity to the Job Description"
+
         results.append({
             "filename": resume["filename"],
-            "score": score
+            "score": score,
+            "reason": reason
         })
 
     # ---------------------------------
@@ -64,6 +73,19 @@ def main():
 
     for index, result in enumerate(results, start=1):
         print(f"{index}. {result['filename']} -> {result['score']:.4f}")
+        # ---------------------------------
+        # Export Results
+        # ---------------------------------
+
+        export_to_csv(
+            results,
+            "../data/output/ranked_resumes.csv"
+        )
+
+        export_to_json(
+            results,
+            "../data/output/ranked_resumes.json"
+        )
 
 
 if __name__ == "__main__":
