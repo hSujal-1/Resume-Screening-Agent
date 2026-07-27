@@ -1,18 +1,64 @@
 [
     {
-        "filename": "sample_resume.txt",
+        "filename": "resume_2.txt",
+        "name": "Priya Verma",
+        "email": "priya.verma@gmail.com",
+        "skills": [
+            "Python",
+            "SQL",
+            "Power BI",
+            "Excel",
+            "Pandas",
+            "NumPy",
+            "Machine Learning",
+            "Git"
+        ],
+        "experience": "5 Years",
+        "education": "Master of Computer Applications",
+        "score": 0.7403,
+        "reason": "Good overall match with relevant skills and experience."
+    },
+    {
+        "filename": "resume_1.txt",
         "name": "Rahul Sharma",
         "email": "rahul@gmail.com",
         "skills": [
             "Python",
             "SQL",
             "Power BI",
-            "Excel",
-            "C"
+            "Excel"
         ],
         "experience": "2 Years",
         "education": "Bachelor of Engineering",
-        "score": 0.733,
+        "score": 0.7263,
         "reason": "Good overall match with relevant skills and experience."
+    },
+    {
+        "filename": "resume_3.txt",
+        "name": "Amit Patel",
+        "email": "amit.patel@gmail.com",
+        "skills": [
+            "SQL",
+            "Excel",
+            "Tableau"
+        ],
+        "experience": "1 Year",
+        "education": "Bachelor of Computer Applications",
+        "score": 0.5466,
+        "reason": "Partial match. Candidate may require further evaluation."
+    },
+    {
+        "filename": "resume_4.txt",
+        "name": "Neha Singh",
+        "email": "neha.singh@gmail.com",
+        "skills": [
+            "Java",
+            "HTML",
+            "CSS"
+        ],
+        "experience": "Not Found",
+        "education": "Bachelor of Technology",
+        "score": 0.1775,
+        "reason": "Partial match. Candidate may require further evaluation."
     }
 ]

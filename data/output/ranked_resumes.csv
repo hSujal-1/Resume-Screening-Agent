@@ -1,2 +1,5 @@
 Rank,Filename,Name,Email,Skills,Experience,Education,Final Score,Reason
-1,sample_resume.txt,Rahul Sharma,rahul@gmail.com,"Python, SQL, Power BI, Excel, C",2 Years,Bachelor of Engineering,0.733,Good overall match with relevant skills and experience.
+1,resume_2.txt,Priya Verma,priya.verma@gmail.com,"Python, SQL, Power BI, Excel, Pandas, NumPy, Machine Learning, Git",5 Years,Master of Computer Applications,0.7403,Good overall match with relevant skills and experience.
+2,resume_1.txt,Rahul Sharma,rahul@gmail.com,"Python, SQL, Power BI, Excel",2 Years,Bachelor of Engineering,0.7263,Good overall match with relevant skills and experience.
+3,resume_3.txt,Amit Patel,amit.patel@gmail.com,"SQL, Excel, Tableau",1 Year,Bachelor of Computer Applications,0.5466,Partial match. Candidate may require further evaluation.
+4,resume_4.txt,Neha Singh,neha.singh@gmail.com,"Java, HTML, CSS",Not Found,Bachelor of Technology,0.1775,Partial match. Candidate may require further evaluation.

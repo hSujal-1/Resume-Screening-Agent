@@ -203,11 +203,11 @@ def extract_skills(text):
 
     found_skills = []
 
-    text_lower = text.lower()
-
     for skill in skill_database:
 
-        if skill.lower() in text_lower:
+        pattern = r"\b" + re.escape(skill) + r"\b"
+
+        if re.search(pattern, text, re.IGNORECASE):
             found_skills.append(skill)
 
     return found_skills
