@@ -1,6 +1,17 @@
 [
     {
         "filename": "sample_resume.txt",
+        "name": "Rahul Sharma",
+        "email": "rahul@gmail.com",
+        "skills": [
+            "Python",
+            "SQL",
+            "Power BI",
+            "Excel",
+            "C"
+        ],
+        "experience": "2 Years",
+        "education": "Bachelor of Engineering",
         "score": 0.7233328819274902,
         "reason": "Moderate semantic similarity to the Job Description"
     }
