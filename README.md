@@ -78,7 +78,7 @@ Resume-Screening-Agent/
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Resume-Screening-Agent.git
+git clone https://github.com/hSujal-1/Resume-Screening-Agent.git
 ```
 
 ---
